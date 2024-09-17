@@ -8,7 +8,7 @@
 import UIKit
 
 protocol ProductsDetailsViewControllerProtocol: AnyObject {
-
+    func setTotalAmount(amount: String)
 }
 
 class ProductsDetailsViewController: UIViewController {
@@ -27,8 +27,8 @@ class ProductsDetailsViewController: UIViewController {
 
     private lazy var totalAmountLabel: UILabel = {
         let view = UILabel()
+        //view.text = "Total: "
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.text = "Total: £"
         return view
     }()
 
@@ -48,6 +48,12 @@ class ProductsDetailsViewController: UIViewController {
 
         setupViewController()
         configureUI()
+        presenter.viewDidLoad()
+    }
+
+    // MARK: - Public Methods
+    func setTotalAmount(amount: String) {
+        totalAmountLabel.text = "Total: £\(amount)"
     }
 
     // MARK: - Private methods
@@ -85,10 +91,6 @@ extension ProductsDetailsViewController: UITableViewDataSource, UITableViewDeleg
         cell.setupLabels(productName: convertedValues.inputAmount, productCount: "£\(convertedValues.convertedAmount)")
 
         return cell
-    }
-
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        //presenter.openDetails()
     }
 }
 
