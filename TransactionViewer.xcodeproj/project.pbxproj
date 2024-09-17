@@ -9,13 +9,21 @@
 /* Begin PBXBuildFile section */
 		0A9D08712C99BC7E009E2069 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9D08702C99BC7E009E2069 /* AppDelegate.swift */; };
 		0A9D08732C99BC7E009E2069 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9D08722C99BC7E009E2069 /* SceneDelegate.swift */; };
-		0A9D08752C99BC7E009E2069 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9D08742C99BC7E009E2069 /* ViewController.swift */; };
-		0A9D08782C99BC7E009E2069 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 0A9D08772C99BC7E009E2069 /* Base */; };
+		0A9D08752C99BC7E009E2069 /* ProductsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9D08742C99BC7E009E2069 /* ProductsViewController.swift */; };
 		0A9D087A2C99BC80009E2069 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A9D08792C99BC80009E2069 /* Assets.xcassets */; };
 		0A9D087D2C99BC80009E2069 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 0A9D087C2C99BC80009E2069 /* Base */; };
 		0A9D08882C99BC80009E2069 /* TransactionViewerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9D08872C99BC80009E2069 /* TransactionViewerTests.swift */; };
 		0A9D08922C99BC80009E2069 /* TransactionViewerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9D08912C99BC80009E2069 /* TransactionViewerUITests.swift */; };
 		0A9D08942C99BC80009E2069 /* TransactionViewerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9D08932C99BC80009E2069 /* TransactionViewerUITestsLaunchTests.swift */; };
+		0A9D08AF2C99D111009E2069 /* ProductsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9D08AE2C99D111009E2069 /* ProductsPresenter.swift */; };
+		0A9D08B12C99D11C009E2069 /* ProductsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9D08B02C99D11C009E2069 /* ProductsModel.swift */; };
+		0A9D08B32C99D580009E2069 /* transactions.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0A9D08B22C99D580009E2069 /* transactions.plist */; };
+		0A9D08B52C99D58A009E2069 /* rates.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0A9D08B42C99D58A009E2069 /* rates.plist */; };
+		0A9D08B72C99D60A009E2069 /* ProductsAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9D08B62C99D60A009E2069 /* ProductsAssembly.swift */; };
+		0A9D08B92C99D77E009E2069 /* RatesDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9D08B82C99D77E009E2069 /* RatesDTO.swift */; };
+		0A9D08BB2C99E597009E2069 /* ProductsDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9D08BA2C99E597009E2069 /* ProductsDTO.swift */; };
+		0A9D08BE2C99E816009E2069 /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9D08BD2C99E816009E2069 /* ProductCell.swift */; };
+		0A9D08C12C99F466009E2069 /* Collection + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9D08C02C99F466009E2069 /* Collection + Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,8 +47,7 @@
 		0A9D086D2C99BC7E009E2069 /* TransactionViewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TransactionViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A9D08702C99BC7E009E2069 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0A9D08722C99BC7E009E2069 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		0A9D08742C99BC7E009E2069 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		0A9D08772C99BC7E009E2069 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		0A9D08742C99BC7E009E2069 /* ProductsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsViewController.swift; sourceTree = "<group>"; };
 		0A9D08792C99BC80009E2069 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0A9D087C2C99BC80009E2069 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0A9D087E2C99BC80009E2069 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,6 +56,15 @@
 		0A9D088D2C99BC80009E2069 /* TransactionViewerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TransactionViewerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A9D08912C99BC80009E2069 /* TransactionViewerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionViewerUITests.swift; sourceTree = "<group>"; };
 		0A9D08932C99BC80009E2069 /* TransactionViewerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionViewerUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		0A9D08AE2C99D111009E2069 /* ProductsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsPresenter.swift; sourceTree = "<group>"; };
+		0A9D08B02C99D11C009E2069 /* ProductsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsModel.swift; sourceTree = "<group>"; };
+		0A9D08B22C99D580009E2069 /* transactions.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = transactions.plist; sourceTree = "<group>"; };
+		0A9D08B42C99D58A009E2069 /* rates.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = rates.plist; sourceTree = "<group>"; };
+		0A9D08B62C99D60A009E2069 /* ProductsAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsAssembly.swift; sourceTree = "<group>"; };
+		0A9D08B82C99D77E009E2069 /* RatesDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatesDTO.swift; sourceTree = "<group>"; };
+		0A9D08BA2C99E597009E2069 /* ProductsDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsDTO.swift; sourceTree = "<group>"; };
+		0A9D08BD2C99E816009E2069 /* ProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
+		0A9D08C02C99F466009E2069 /* Collection + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection + Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,10 +115,12 @@
 		0A9D086F2C99BC7E009E2069 /* TransactionViewer */ = {
 			isa = PBXGroup;
 			children = (
+				0A9D08B42C99D58A009E2069 /* rates.plist */,
+				0A9D08B22C99D580009E2069 /* transactions.plist */,
+				0A9D08BF2C99F438009E2069 /* Utilities */,
+				0A9D08A82C99CFE9009E2069 /* Modules */,
 				0A9D08702C99BC7E009E2069 /* AppDelegate.swift */,
 				0A9D08722C99BC7E009E2069 /* SceneDelegate.swift */,
-				0A9D08742C99BC7E009E2069 /* ViewController.swift */,
-				0A9D08762C99BC7E009E2069 /* Main.storyboard */,
 				0A9D08792C99BC80009E2069 /* Assets.xcassets */,
 				0A9D087B2C99BC80009E2069 /* LaunchScreen.storyboard */,
 				0A9D087E2C99BC80009E2069 /* Info.plist */,
@@ -125,6 +143,52 @@
 				0A9D08932C99BC80009E2069 /* TransactionViewerUITestsLaunchTests.swift */,
 			);
 			path = TransactionViewerUITests;
+			sourceTree = "<group>";
+		};
+		0A9D08A82C99CFE9009E2069 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				0A9D08A92C99D009009E2069 /* Products */,
+				0A9D08AA2C99D013009E2069 /* ProductsDetails */,
+				0A9D08BA2C99E597009E2069 /* ProductsDTO.swift */,
+				0A9D08B82C99D77E009E2069 /* RatesDTO.swift */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		0A9D08A92C99D009009E2069 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0A9D08BC2C99E7FD009E2069 /* ProductCell */,
+				0A9D08B02C99D11C009E2069 /* ProductsModel.swift */,
+				0A9D08742C99BC7E009E2069 /* ProductsViewController.swift */,
+				0A9D08AE2C99D111009E2069 /* ProductsPresenter.swift */,
+				0A9D08B62C99D60A009E2069 /* ProductsAssembly.swift */,
+			);
+			path = Products;
+			sourceTree = "<group>";
+		};
+		0A9D08AA2C99D013009E2069 /* ProductsDetails */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ProductsDetails;
+			sourceTree = "<group>";
+		};
+		0A9D08BC2C99E7FD009E2069 /* ProductCell */ = {
+			isa = PBXGroup;
+			children = (
+				0A9D08BD2C99E816009E2069 /* ProductCell.swift */,
+			);
+			path = ProductCell;
+			sourceTree = "<group>";
+		};
+		0A9D08BF2C99F438009E2069 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				0A9D08C02C99F466009E2069 /* Collection + Extensions.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,9 +295,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A9D08B52C99D58A009E2069 /* rates.plist in Resources */,
 				0A9D087A2C99BC80009E2069 /* Assets.xcassets in Resources */,
 				0A9D087D2C99BC80009E2069 /* Base in Resources */,
-				0A9D08782C99BC7E009E2069 /* Base in Resources */,
+				0A9D08B32C99D580009E2069 /* transactions.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,9 +323,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0A9D08752C99BC7E009E2069 /* ViewController.swift in Sources */,
+				0A9D08752C99BC7E009E2069 /* ProductsViewController.swift in Sources */,
+				0A9D08B12C99D11C009E2069 /* ProductsModel.swift in Sources */,
 				0A9D08712C99BC7E009E2069 /* AppDelegate.swift in Sources */,
+				0A9D08AF2C99D111009E2069 /* ProductsPresenter.swift in Sources */,
+				0A9D08B92C99D77E009E2069 /* RatesDTO.swift in Sources */,
 				0A9D08732C99BC7E009E2069 /* SceneDelegate.swift in Sources */,
+				0A9D08BE2C99E816009E2069 /* ProductCell.swift in Sources */,
+				0A9D08B72C99D60A009E2069 /* ProductsAssembly.swift in Sources */,
+				0A9D08BB2C99E597009E2069 /* ProductsDTO.swift in Sources */,
+				0A9D08C12C99F466009E2069 /* Collection + Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,14 +369,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		0A9D08762C99BC7E009E2069 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				0A9D08772C99BC7E009E2069 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		0A9D087B2C99BC80009E2069 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -446,7 +510,6 @@
 				INFOPLIST_FILE = TransactionViewer/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -473,7 +536,6 @@
 				INFOPLIST_FILE = TransactionViewer/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
