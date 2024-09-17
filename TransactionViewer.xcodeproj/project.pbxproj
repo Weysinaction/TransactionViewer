@@ -24,6 +24,10 @@
 		0A9D08BB2C99E597009E2069 /* ProductsDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9D08BA2C99E597009E2069 /* ProductsDTO.swift */; };
 		0A9D08BE2C99E816009E2069 /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9D08BD2C99E816009E2069 /* ProductCell.swift */; };
 		0A9D08C12C99F466009E2069 /* Collection + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9D08C02C99F466009E2069 /* Collection + Extensions.swift */; };
+		0A9D08C32C99F830009E2069 /* ProductsDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9D08C22C99F830009E2069 /* ProductsDetailsViewController.swift */; };
+		0A9D08C52C99F853009E2069 /* ProductsDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9D08C42C99F853009E2069 /* ProductsDetailsPresenter.swift */; };
+		0A9D08C72C99F85B009E2069 /* ProductsDetailsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9D08C62C99F85B009E2069 /* ProductsDetailsModel.swift */; };
+		0A9D08C92C99F863009E2069 /* ProductsDetailsAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9D08C82C99F863009E2069 /* ProductsDetailsAssembly.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +69,10 @@
 		0A9D08BA2C99E597009E2069 /* ProductsDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsDTO.swift; sourceTree = "<group>"; };
 		0A9D08BD2C99E816009E2069 /* ProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
 		0A9D08C02C99F466009E2069 /* Collection + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection + Extensions.swift"; sourceTree = "<group>"; };
+		0A9D08C22C99F830009E2069 /* ProductsDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsDetailsViewController.swift; sourceTree = "<group>"; };
+		0A9D08C42C99F853009E2069 /* ProductsDetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsDetailsPresenter.swift; sourceTree = "<group>"; };
+		0A9D08C62C99F85B009E2069 /* ProductsDetailsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsDetailsModel.swift; sourceTree = "<group>"; };
+		0A9D08C82C99F863009E2069 /* ProductsDetailsAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsDetailsAssembly.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,6 +179,10 @@
 		0A9D08AA2C99D013009E2069 /* ProductsDetails */ = {
 			isa = PBXGroup;
 			children = (
+				0A9D08C62C99F85B009E2069 /* ProductsDetailsModel.swift */,
+				0A9D08C22C99F830009E2069 /* ProductsDetailsViewController.swift */,
+				0A9D08C42C99F853009E2069 /* ProductsDetailsPresenter.swift */,
+				0A9D08C82C99F863009E2069 /* ProductsDetailsAssembly.swift */,
 			);
 			path = ProductsDetails;
 			sourceTree = "<group>";
@@ -326,12 +338,16 @@
 				0A9D08752C99BC7E009E2069 /* ProductsViewController.swift in Sources */,
 				0A9D08B12C99D11C009E2069 /* ProductsModel.swift in Sources */,
 				0A9D08712C99BC7E009E2069 /* AppDelegate.swift in Sources */,
+				0A9D08C52C99F853009E2069 /* ProductsDetailsPresenter.swift in Sources */,
+				0A9D08C72C99F85B009E2069 /* ProductsDetailsModel.swift in Sources */,
 				0A9D08AF2C99D111009E2069 /* ProductsPresenter.swift in Sources */,
 				0A9D08B92C99D77E009E2069 /* RatesDTO.swift in Sources */,
 				0A9D08732C99BC7E009E2069 /* SceneDelegate.swift in Sources */,
 				0A9D08BE2C99E816009E2069 /* ProductCell.swift in Sources */,
+				0A9D08C32C99F830009E2069 /* ProductsDetailsViewController.swift in Sources */,
 				0A9D08B72C99D60A009E2069 /* ProductsAssembly.swift in Sources */,
 				0A9D08BB2C99E597009E2069 /* ProductsDTO.swift in Sources */,
+				0A9D08C92C99F863009E2069 /* ProductsDetailsAssembly.swift in Sources */,
 				0A9D08C12C99F466009E2069 /* Collection + Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

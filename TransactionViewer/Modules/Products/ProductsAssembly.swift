@@ -13,6 +13,7 @@ class ProductsAssembly {
         let model = ProductsModel()
         let presenter = ProductsPresenter(model: model)
         let viewController = ProductsViewController(presenter: presenter)
+        presenter.viewController = viewController
 
         return viewController
     }

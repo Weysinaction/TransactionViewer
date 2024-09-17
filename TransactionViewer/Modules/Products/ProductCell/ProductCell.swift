@@ -8,21 +8,30 @@
 import UIKit
 
 class ProductCell: UITableViewCell {
+    // MARK: - Public Properties
+    var leftLabelText: String? {
+        leftLabel.text
+    }
 
+    var rightLabelText: String? {
+        rightLabel.text
+    }
+
+    // MARK: - Private properties
     private lazy var mainStackView: UIStackView = {
-        let view = UIStackView(arrangedSubviews: [productNameLabel, productsCountLabel])
+        let view = UIStackView(arrangedSubviews: [leftLabel, rightLabel])
         view.translatesAutoresizingMaskIntoConstraints = false
         view.axis = .horizontal
         return view
     }()
 
-    private lazy var productNameLabel: UILabel = {
+    private lazy var leftLabel: UILabel = {
         let view = UILabel()
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
 
-    private lazy var productsCountLabel: UILabel = {
+    private lazy var rightLabel: UILabel = {
         let view = UILabel()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.textColor = .lightGray
@@ -53,8 +62,8 @@ class ProductCell: UITableViewCell {
 
     // MARK: - Public methods
     func setupLabels(productName: String?, productCount: String?) {
-        productNameLabel.text = productName
-        productsCountLabel.text = productCount
+        leftLabel.text = productName
+        rightLabel.text = "\(productCount ?? "0")"
     }
 
     // MARK: - Private methods

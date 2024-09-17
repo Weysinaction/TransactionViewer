@@ -6,16 +6,19 @@
 //
 
 import Foundation
+import UIKit
 
 protocol ProductsPresenterProtocol {
     var products: [String] { get }
     func viewDidLoad()
     func getTransactionCountForProduct(productName: String) -> Int?
+    func openDetails(productName: String)
 }
 
 class ProductsPresenter: ProductsPresenterProtocol {
     // MARK: - Public properties
     var model: ProductsModelProtocol
+    weak var viewController: ProductsViewControllerProtocol?
     var products: [String] {
         model.getProductsNames() ?? []
     }
@@ -35,6 +38,15 @@ class ProductsPresenter: ProductsPresenterProtocol {
         guard let products = model.getProducts() else { return nil }
 
         return products.filter({ $0.sku == productName }).count
+    }
+
+    func openDetails(productName: String) {
+        guard let viewController = viewController as? UIViewController else { return }
+
+        let transactionByProduct = model.getProducts()?.filter({ $0.sku == productName })
+        let rates = model.getRates()
+        let detailsViewController = ProductsDetailsAssembly().createModule(transactionsByProduct: transactionByProduct, rates: rates)
+        viewController.navigationController?.pushViewController(detailsViewController, animated: true)
     }
 
     // MARK: - Private methods

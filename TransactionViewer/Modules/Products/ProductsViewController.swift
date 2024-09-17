@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol ProductsViewControllerProtocol: AnyObject {
+
+}
+
 class ProductsViewController: UIViewController {
     //MARK: - Public properties
     var presenter: ProductsPresenterProtocol
@@ -14,6 +18,7 @@ class ProductsViewController: UIViewController {
     // MARK: - Private properties
     private lazy var tableView: UITableView = {
         let view = UITableView()
+        view.backgroundColor = .systemBackground
         view.translatesAutoresizingMaskIntoConstraints = false
         view.delegate = self
         view.dataSource = self
@@ -69,17 +74,26 @@ extension ProductsViewController: UITableViewDataSource, UITableViewDelegate {
         let products = presenter.products
         if let product = products[safe: indexPath.row],
            let transactionsCount = presenter.getTransactionCountForProduct(productName: product) {
-            cell.setupLabels(productName: product, productCount: "\(transactionsCount)")
+            cell.setupLabels(productName: product, productCount: "\(transactionsCount) transactions")
         }
 
         return cell
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        <#code#>
+        guard let cell = tableView.cellForRow(at: indexPath) as? ProductCell,
+        let productName = cell.leftLabelText else { return }
+
+        presenter.openDetails(productName: productName)
     }
 }
 
+// MARK: - ProductsViewControllerProtocol
+extension ProductsViewController: ProductsViewControllerProtocol {
+
+}
+
+// MARK: - Constants
 private enum Constants {
     static let leftTableInset: CGFloat = 12
     static let title: String = "Products"
